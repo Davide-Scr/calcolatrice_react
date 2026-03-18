@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Open Source Philosophy</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("bg.jpg") repeat-y center top;
+            background-size: 100% auto;
+            font-family: Arial, sans-serif;
+            color: #eee;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            width: 100%;
+            background-color: chocolate;
+            display: flex;
+            align-items: center;
+            padding: 8px 20px;
+            box-sizing: border-box;
+        }
+
+        nav img {
+            height: 40px;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: black;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: darkslateblue;
+        }
+
+        .content-box {
+            width: 60%;
+            margin: 40px auto;
+            background: #eee;
+            padding: 25px;
+            border-radius: 12px;
+            box-sizing: border-box;
+            color: black;
+        }
+
+        .grid {
+            width: 80%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .grid-box {
+            background: #eee;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+        }
+        
+        /* Aggiunto stile per le liste nella griglia per renderle più leggibili */
+        .grid-box ul {
+            padding-left: 20px;
+        }
+
+        .banner {
+            width: 100%;
+            background: #eee;
+            padding: 60px 20px;
+            text-align: center;
+            box-sizing: border-box;
+            color: black;
+            font-size: 1.5rem;
+            font-style: italic;
+        }
+
+        footer {
+            background: darkslateblue;
+            color: #eee;
+            padding: 40px 20px;
+            display: flex;
+        }
+
+        footer h2 {
+            color: chocolate;
+            font-size: 1.6rem;
+            margin-top: 0;
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .content-box {
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">
+            <img src="logo.png" alt="Site Logo">
+        </a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Ideology</a></li>
+            <li><a href="#">Licenses</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-box">
+        <h1>The Open Source Philosophy</h1>
+        <h3>SCRAMUZZA - BALZANO - GRIVETTO</h3>
+        <p><strong>The Ideology:</strong> This page explores the fundamental concepts and ethical principles guiding the Free Software and Open Source movements.</p> 
+        <p>At its core, open source is not just a development methodology; it is a philosophy based on transparency, collaboration, and the user's right to control their own computing. </p>
+    </div>
+
+    <div class="banner">
+        "Free software is a matter of liberty, not price. To understand the concept, you should think of 'free' as in 'free speech', not as in 'free beer'." <br>
+        <small>- Richard Stallman</small>
+    </div>
+
+    <div class="grid">
+        <div class="grid-box">
+            <h2>What is Open Source?</h2>
+            <p>The term "Open Source" refers to software where the original source code is made freely available and may be redistributed and modified.</p>
+            <p>While often used interchangeably with "Free Software," the latter (championed by the FSF) focuses strictly on user ethics and freedom, whereas "Open Source" often emphasizes the practical benefits of collaborative development.</p>
+        </div>
+
+        <div class="grid-box">
+            <h2>The 4 Freedoms (FSF)</h2>
+            <p>According to the Free Software Foundation, a program is free only if users have these four essential freedoms:</p>
+            <ul>
+                <li><strong>Freedom 0:</strong> To run the program as you wish, for any purpose.</li>
+                <li><strong>Freedom 1:</strong> To study how the program works and change it.</li>
+                <li><strong>Freedom 2:</strong> To redistribute copies so you can help your neighbor.</li>
+                <li><strong>Freedom 3:</strong> To distribute copies of your modified versions to others.</li>
+            </ul>
+        </div>
+
+        <div class="grid-box">
+            <h2>Copyleft vs. Copyright</h2>
+            <p><strong>Copyright:</strong> Traditionally restricts users ("All rights reserved"). You cannot modify or share the work without permission.</p>
+            <p><strong>Copyleft (e.g., GPL License):</strong> Often described as "All rights reversed." It uses copyright law to grant freedoms. It mandates that if you redistribute the software (modified or not), you must pass along the same freedoms to the recipient. </p>
+        </div>
+
+        <div class="grid-box">
+            <h2>Why Contribute for Free?</h2>
+            <p>Why do programmers give away their time? The reasons are diverse:</p>
+            <ul>
+                <li><strong>Altruism:</strong> A desire to contribute to the global knowledge pool.</li>
+                <li><strong>Problem Solving:</strong> "Scratching an itch" — fixing a bug that affects them personally.</li>
+                <li><strong>Reputation:</strong> Building a portfolio and gaining peer recognition.</li>
+                <li><strong>Community:</strong> Being part of a collaborative social movement.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="col" style="flex: 2;">
+            <h2>Project Info</h2>
+            <p>Created by Scramuzza, Balzano, and Grivetto.</p>
+            <p>This project aims to educate users on the importance of digital rights and the history of the GNU/Linux movement.</p>
+        </div>
+
+        <div class="col" style="flex: 1;">
+            <h2>Resources</h2>
+            <p><a href="#" style="color: #eee;">Free Software Foundation</a></p>
+            <p><a href="#" style="color: #eee;">Open Source Initiative</a></p>
+            <p><a href="#" style="color: #eee;">GNU General Public License</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

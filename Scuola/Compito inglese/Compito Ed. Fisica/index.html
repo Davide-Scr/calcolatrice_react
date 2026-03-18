@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>MotoGP – Beyond the Data</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="start" class="screen">
+    <h1>MotoGP – Beyond the Data</h1>
+    <button id="startBtn">INIZIA</button>
+</div>
+
+<div id="game" class="hidden">
+    <div id="hud">
+        DATA: <span id="data">0</span> |
+        STAB: <span id="stab">0</span>
+    </div>
+
+    <div id="map">
+        <div id="player"></div>
+
+        <div class="object telemetry"></div>
+        <div class="object tyre"></div>
+        <div class="object ai"></div>
+        <div id="boss"></div>
+    </div>
+
+    <div id="dialogue"></div>
+</div>
+
+<div id="fight" class="hidden">
+    <h2>BOSS FIGHT</h2>
+    <p>Boss HP: <span id="bossHP">10</span></p>
+    <div id="fightBox">
+        <div id="soul"></div>
+    </div>
+    <button onclick="attack()">ATTACCA</button>
+</div>
+
+<div id="win" class="screen hidden">
+    <h1>HAI VINTO</h1>
+    <button onclick="location.reload()">RIGIOCA</button>
+</div>
+
+<audio id="fieldMusic" src="music/field.mp3" loop></audio>
+<audio id="bossMusic" src="music/boss.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

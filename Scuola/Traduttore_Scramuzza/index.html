@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Polyglot AI — Traduttore Didattico</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <div class="logo">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="6" fill="#0ee7b7" opacity="0.12"/>
+          <path d="M7 12h10M7 8h8M7 16h6" stroke="#6ee7b7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="brand">
+          <div class="title">Polyglot AI</div>
+          <div class="subtitle">Traduttore & Esempi</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <label for="inputText" class="label">Testo da analizzare / tradurre</label>
+      <textarea id="inputText" placeholder="Scrivi qui il testo..." rows="6"></textarea>
+
+      <div class="controls">
+        <div class="select-wrap">
+          <label for="sourceLanguage" class="label small">Lingua sorgente</label>
+          <select id="sourceLanguage">
+            <option value="Auto">Rileva lingua</option>
+            <option value="Italiano">Italiano</option>
+            <option value="Inglese">Inglese</option>
+            <option value="Spagnolo">Spagnolo</option>
+            <option value="Francese">Francese</option>
+            <option value="Tedesco">Tedesco</option>
+          </select>
+        </div>
+
+        <div class="select-wrap">
+          <label for="targetLanguage" class="label small">Lingua di destinazione</label>
+          <select id="targetLanguage">
+            <option value="Inglese">Inglese</option>
+            <option value="Italiano">Italiano</option>
+            <option value="Spagnolo">Spagnolo</option>
+            <option value="Francese">Francese</option>
+            <option value="Tedesco">Tedesco</option>
+          </select>
+        </div>
+
+        <div class="btn-wrap">
+          <button id="submitBtn" class="primary">Analizza Testo</button>
+        </div>
+      </div>
+
+      <div id="outputResult" class="output" aria-live="polite">
+        <p class="placeholder">I log appariranno qui (Console F12 per debug).</p>
+      </div>
+
+      <div id="translationBox" class="result-grid" hidden>
+        <div class="result-box">
+          <h3>Traduzione</h3>
+          <div id="translationResult" class="result-content"></div>
+        </div>
+
+        <div class="result-box">
+          <h3>Esempio di utilizzo</h3>
+          <div id="explanationResult" class="result-content"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p class="small">Polyglot AI — demo didattica</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

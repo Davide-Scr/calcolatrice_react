@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SQLTARUNE — Impara SQL come se stessi giocando a Deltarune!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>SQLTARUNE</h1>
+        <div class="subtitle">Impara SQL evitando i colpi del virus NULL</div>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <div class="subtitle">Usa frecce/WASD per muovere il cuore • Scegli la risposta giusta</div>
+        <button id="audioToggle" class="audio-toggle" title="Play / Pause musica">♪</button>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <input id="volSlider" type="range" min="0" max="1" step="0.01" value="0.55" aria-label="Volume" />
+        </div>
+      </div>
+    </header>
+
+    <section class="arena card" id="arena">
+      <div class="top-bar">
+        <div id="levelLabel">Livello 1</div>
+        <div class="hud">
+          <div style="width:110px;text-align:right;color:var(--muted);font-size:13px;margin-right:8px">Player</div>
+          <div class="health" title="Salute"><i id="hpFill" style="width:100%"></i></div>
+        </div>
+      </div>
+
+      <div class="arena-canvas" id="arenaCanvas">
+        <div class="soul" id="soul"></div>
+        <!-- attacks are appended here -->
+        <div id="overlayIntro" class="overlay">
+          <h2>Benvenuto nel Regno dei Dati ✨</h2>
+          <p class="muted">Il virus <strong>NULL</strong> ha corrotto il Database. Impara DDL, DML, DCL e TCL per ripristinare l'ordine.</p>
+          <div style="height:12px"></div>
+          <button id="startBtn">Inizia l'avventura</button>
+        </div>
+        <div id="overlayFinal" class="overlay" style="display:none">
+          <h2 id="finalTitle">🎉 HAI SALVATO IL DATABASE!</h2>
+          <div class="muted" id="finalText">Sei un Maestro SQL</div>
+          <div style="height:10px"></div>
+          <div id="finalBadges" class="badges"></div>
+          <div style="height:12px"></div>
+          <button id="retryBtn">Rigioca</button>
+        </div>
+        <audio id="bgAudio" preload="auto">
+          <source src="Rude Buster.mp3" type="audio/mp4">
+          <!-- Se il file non è disponibile, il browser ignorerà la traccia -->
+        </audio>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="card">
+        <div class="question" id="question">Premi Inizia per cominciare.</div>
+        <div class="options" id="options"></div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div class="muted">Badge</div>
+          <div class="muted">Livello <span id="levelNum">1</span>/<span id="levelMax">4</span></div>
+        </div>
+        <div class="badges" id="badges"></div>
+        <div style="margin-top:8px">
+          <div class="hp-text">Salute: <span id="hpText">100</span>/<span id="hpMax">100</span></div>
+          <div class="hp-hearts" id="hpHearts" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="card muted" style="font-size:13px">Seleziona rapidamente — le forze del virus non aspettano! Risposte sbagliate danneggiano il tuo cuore.</div>
+    </aside>
+
+    <footer>Questo è un gioco didattico — riprende lo stile bullet-hell per rendere l'apprendimento più divertente.</footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
